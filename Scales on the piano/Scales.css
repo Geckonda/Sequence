@@ -1,0 +1,243 @@
+*{
+	box-sizing: border-box;
+	font-family: 'Anton', sans-serif;
+	font-family: 'Crimson Text', serif;
+}
+a{
+	text-decoration: none;
+	position: absolute;
+	color: #eee;
+	font-size: 50px;
+	top: 10px;
+	left: 10px;
+}
+body{
+	height: 100vh;
+	width: 100%;
+	margin:0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    background: radial-gradient(#45484d,#000);
+	}
+#main{
+	height: 90vh;
+	width: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    background: radial-gradient(#fff,#444);
+	border-radius: 50px;
+	
+
+}
+/*-----Тело пианино-------*/
+#pianoBody{
+	width: 1400px;
+	height: 800px;
+	background-color: #111;
+	border-radius: 50px
+}
+/*-----Отображение минора мажора и гамм-------*/
+	#interface{
+		width: 1400px;
+		height: 250px;
+		padding:25px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	/*----Контейнер минора и мажора--------*/
+		#mMm{
+			width: 80%;
+			height: 100px;
+			display: flex;
+			justify-content: space-between;
+					}
+				#containermMm{
+					width: 40%;
+					height: 100%;
+					display: flex;
+					justify-content: space-around;
+					margin-top: 30px;
+				}
+		/*----Показатель текущей гаммы--------*/
+		.current__scale{
+			width: 40%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #bbb;
+			border-radius: 8px;
+			box-shadow: inset 0 0 50px 1px;
+		}
+			#ST{
+				-webkit-appearance: none;
+				appearance: none;
+				position: absolute;
+				opacity: 0;
+			}
+			.start__label{
+				color: #000;
+				font-size: 70px;
+			}
+		/*----Выбор гамм------*/
+		#chooseScales{
+			width: 100%;
+			height: 100px;
+			display: flex;
+			justify-content: space-around;
+			align-items: flex-end;
+		}
+		/* radio */
+		.radio__MajMin{
+			margin:10px 0px;
+			text-align: center;
+			width: 150px;
+			height: 40px;
+		}
+		.radio__MajMin .radio__label{
+			color: #aaa;
+		}
+		.radio{
+				width: 60px;
+				height: 40px;
+				text-align: center;
+		}
+			.radio__input{
+				-webkit-appearance: none;
+				appearance: none;
+				position: absolute;
+			}
+			.radio__labelmMm{
+				color:#aaa;
+				font-size: 35px;
+				position: relative;
+				width: 40px;
+				z-index: 2;
+			}
+			/*-----Черточка под мажорами минорами-------*/
+				.radio__labelmMm:after{
+					content: "";
+					width: 150px;
+					height: 2px;
+					display: block;
+					background-color: #FFF;
+					z-index: 1;
+					position: absolute;
+					opacity: 0;
+				}
+			.radio__label{
+				color:#aaa;
+				font-size: 35px;
+				position: relative;
+				width: 40px;
+				z-index: 2;
+			}
+			/*------Круглишок, который обводит гамму------*/
+				.radio__label:before{
+					content: "";
+					display: block;
+					position: absolute;
+					width: 50px;
+					height: 50px;
+					border-radius: 100%;
+					border:2px solid #fff;
+					opacity: 0;
+					z-index: 1;
+					top:-10px;
+					right: -10px;
+				}
+				/*-----Изменение стиля при checked -------*/
+			.radio__input:checked + .radio__label:before{
+				opacity: 1;
+			}
+			.radio__input:checked + .radio__label{
+				color: #FFF;
+			}
+			.radio__input:checked + .radio__labelmMm{
+				color: #FFF;
+			}
+			.radio__input:checked + .radio__labelmMm:after{
+				opacity: 1;
+			}
+	#placeKeys{
+		width: 1400px;
+		height: 550px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+		#pianoKeys{
+			width: 1200px;
+			height: 450px;
+			display: flex;
+		}
+		#pianoKeysBlack{
+			position: absolute;
+			right: 410px;
+			width: 1200px;
+			height: 450px;
+			display: flex;
+			justify-content: space-around;
+		}
+			.keysWhite{
+				width: 100px;
+				height: 450px;
+				background-color: #fff;
+				box-sizing: border-box;
+				border: 2px solid black;
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				border-radius: 0 0 15px 15px;
+			}
+			.keysWhite:nth-child(5){
+			}
+			.keysBlack{
+				width: 50px;
+				height: 300px;
+				background-color: #000;
+				display: flex;
+				align-items: flex-end;
+				border-radius: 0 0 8px 8px;
+			}
+			.keysBlack:nth-child(1){
+				display: flex;
+			}
+				#halfKey{
+					width: 50%;
+					height: 100%;
+					background-color: #111;
+				}
+				/*-----Ненужные невидимые черные клавиши-------*/
+			.keysBlack:nth-child(2){
+				visibility: hidden;
+			}
+			.keysBlack:nth-child(6){
+				visibility: hidden;
+			}
+			.keysBlack:nth-child(9){
+				visibility: hidden;
+			}
+			/*----Название клавиш (F F# G и т.п.)-------*/
+				.keyNameW{
+					width: 60%;
+					height: 60px;
+					font-size: 50px;
+					padding: 0 0 10px 0;
+					border-radius: 100%;
+					text-align: center;
+					transition-duration: 1s;
+				}
+				.keyNameB{
+					width: 100%;
+					height: 60px;
+					font-size: 30px;
+					padding: 0 0 10px 0;
+					text-align: center;
+					border-radius: 100%;
+					color: #FFF;
+					transition-duration: 1s;
+				}

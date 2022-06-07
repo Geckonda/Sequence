@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="guitarScales.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    <title>Guitar Scales</title>
+</head>
+<body>
+    <section id="container" >
+    <a href="../sequence.html">Back</a>
+    <section id = 'mainBorder'>
+        <section id = "mainSection">
+            <div id = "interface">
+            <div class = 'interfaceButtons'>
+                <button class = 'settings' id = 'showButton'>Show</button>
+                <button class = 'settings' id = 'ClearButton'>Clear</button>
+            </div>
+            <div>
+                <P id = 'currentTableScale'></P>
+            </div>
+            <div id = 'scaleScreen'></div>
+            </div>
+            <section id="positionNames">
+                <div class = 'indexes' id="index_0"></div>
+            </section>
+            <section id="neck">
+                <div class="string" id = "string_E"></div>
+                <div class="string" id = "string_B"></div>
+                <div class="string" id = "string_G"></div>
+                <div class="string" id = "string_D"></div>
+                <div class="string" id = "string_A"></div>
+                <div class="string" id = "string_EE"></div>
+            </section>
+            <section id="notes">
+                <div class="notes" id="string_E0"></div>
+                <div class="notes" id="string_B1"></div>
+                <div class="notes" id="string_G2"></div>
+                <div class="notes" id="string_D3"></div>
+                <div class="notes" id="string_A4"></div>
+                <div class="notes" id="string_EE5"></div>
+            </section>
+        </section>
+    </section>
+
+    <section id ='chooseSection'>
+        <div id ='exitSection' style="width: 100%; height:10%;">
+        </div>
+        <div style="width: 100%; height:80%;display: flex;">
+            <div class="listBox">
+                <ul class="ulNotes">Root
+                    <li class="liNotes" value="0">E</li>
+                    <li class="liNotes" value="1">F</li>
+                    <li class="liNotes" value="2">F#</li>
+                    <li class="liNotes" value="3">G</li>
+                    <li class="liNotes" value="4">G#</li>
+                    <li class="liNotes" value="5">A</li>
+                    <li class="liNotes" value="6">A#</li>
+                    <li class="liNotes" value="7">B</li>
+                    <li class="liNotes" value="8">C</li>
+                    <li class="liNotes" value="9">C#</li>
+                    <li class="liNotes" value="10">D</li>
+                    <li class="liNotes" value="11">D#</li>
+                </ul>
+            </div>
+            <div class="listBox">
+                <ul class="ulLads">Scale
+                    <li class="liLads" value="0">Ionian</li>
+                    <li class="liLads" value="1">Aeolian</li>
+                    <li class="liLads" value="2">Dorian</li>
+                    <li class="liLads" value="3">Phrygian</li>
+                    <li class="liLads" value="4">Lydian</li>
+                    <li class="liLads" value="5">Mixolydian</li>
+                    <li class="liLads" value="6">Locrian</li>
+                </ul>
+            </div>
+        </div>
+        <div style="width: 100%;height: 10%;display: flex;justify-content: center;align-items: center;">
+            <button class = 'settings' id="goBtn" style="margin: 0;">Go</button>
+        </div>
+    </section>
+</section>
+    <script src="scriptNotes.js"></script>
+</body>
+</html>
