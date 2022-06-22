@@ -196,3 +196,4 @@ document.querySelector('#showButton').addEventListener('click', ()=>{
 });
 document.querySelector('#ClearButton').addEventListener('click', ()=>{ClearScale();
     ClearScreenNotes();})
+    document.querySelector('#CloseBtn').addEventListener('click', () => settings.style.display = 'none')
