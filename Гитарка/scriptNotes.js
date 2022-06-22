@@ -29,6 +29,10 @@ const settings = document.querySelector('#chooseSection');
 const scaleScreen = document.querySelector('#scaleScreen');
 const scaleNameScreen = document.querySelector('#currentTableScale');
 
+function goButtonActivate(){
+    if(activeLad != undefined && activeNote != undefined)
+        goButton.disabled = false;
+}
 
 goButton.addEventListener('click', ()=>{
     settings.style.display = 'none';
@@ -51,6 +55,7 @@ const labelNotes2 = document.querySelector('.ulLads');
             let currentNote = event.target;
             ChangeAppearance(currentNote,'note');
             activeNote = currentNote.value;
+            goButtonActivate();
         }
     })
     labelNotes2.addEventListener('click', function(event){
@@ -58,6 +63,7 @@ const labelNotes2 = document.querySelector('.ulLads');
             let currentLad = event.target;
             ChangeAppearance(currentLad,'lad');
             activeLad = currentLad.value;
+            goButtonActivate();
         }
     })
 var changedNotesField = false;
