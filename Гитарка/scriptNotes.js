@@ -151,9 +151,9 @@ function ShowScaleName(){
 
 function ShowNames(){
     let className = "posNames";
-        const currentOdject = document.getElementById('index_0');
+        const currentObject = document.getElementById('index_0');
         for(var i = 0; i < notes.length-1; i++){
-            BlockCreation(i,i,currentOdject,className);
+            BlockCreation(i,i,currentObject,className);
         }
 }
 function ShowLads(){
