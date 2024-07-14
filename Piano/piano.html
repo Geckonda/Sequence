@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Пианино</title>
+</head>
+<body>
+   <a href="../sequence.html" class="menu__link">Back</a>
+   <main>
+      <div class="piano">
+         <div class="piano__interface interface">
+            <div class="interface__scales scales">
+               <div class="scales__container">
+                  <div class="scales__tab">
+                     <input class ="scales__input" type="radio" value="0" name="MajMin" id="major" >
+                     <label class="scales__label" for ="major">MAJOR</label>
+                  </div>
+                  <div class="scales__tab">
+                     <input class ="scales__input" type="radio" value="1" name="MajMin" id="minor" >
+                     <label class="scales__label" for ="minor">MINOR</label>
+                  </div>
+               </div>
+               <div class="scales__current-scale">
+                  <!-- Выводится текущая тональность -->
+                   Выберите ноту и лад
+               </div>
+            </div>
+            <div class="interface__notes" id="scale-notes">
+               <!-- Контейнер для кнопок выбора тональности -->
+            </div>
+         </div>
+         <div class="piano__body">
+            <div id="piano-keys">
+               <!--Блок клавиш-->
+            </div>
+         </div>
+      </div>
+   </main>
+   <script src="script.js"></script>
+</body>
+</html>

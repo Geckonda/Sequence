@@ -1,0 +1,211 @@
+*{
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+
+html, body{
+   height: 100%;
+   width: 100%;
+}
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: radial-gradient(#45484d,#000);
+	/* transform: rotate(90deg); */
+}
+main{
+	padding: 25px 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+   background: #000;
+   background: radial-gradient(#fff,#444);
+	border-radius: 50px;
+}
+.menu__link {
+   position: absolute;
+   top:10px;
+   left: 10px;
+   text-decoration: none;
+   color: #fff;
+   font-size: 32px;
+}
+.piano {
+	background-color: #111;
+   width: 1250px;
+   height: 500px;
+	border-radius: 50px;
+	display: flex;
+	flex-direction: column;
+}
+.piano__interface {
+   width: 100%;
+	height: 175px;
+	padding:25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+   box-sizing: border-box;
+}
+.interface {
+}
+.interface__scales {
+   width: 80%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+}
+.scales {
+}
+.scales__container {
+   width: 40%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.scales__tab {
+	margin:10px 0px;
+	text-align: center;
+	width: 150px;
+	height: 40px;
+	color: #aaa;
+}
+.scales__input {
+	-webkit-appearance: none;
+	appearance: none;
+	position: absolute;
+}
+.scales__label {
+	font-size: 32px;
+   cursor: pointer;
+}
+.scales__label_active, .radio__label_active{
+	text-decoration: underline;
+}
+.scales__current-scale{
+	width: 50%;
+	height: 100%;
+   background: radial-gradient(#fff,#444);
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 32px;
+}
+.interface__notes {
+   width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+.radio__input{
+	-webkit-appearance: none;
+	appearance: none;
+	position: absolute;
+}
+.radio__label{
+	color:#aaa;
+	font-size: 32px;
+   cursor: pointer;
+}
+
+.piano__body {
+   width: 100%;
+   height: 525px;
+   box-sizing: border-box;
+	display: flex;
+   justify-content: center;
+}
+#piano-keys{
+	display: flex;
+   padding: 0 0 25px 0;
+   position: relative;
+}
+
+/*  */
+.keysWhite{
+   width: 80px;
+	background-color: #fff;
+	border: 2px solid black;
+	display: flex;
+	flex: 0 0 auto;
+	align-items: flex-end;
+	justify-content: center;
+	border-radius: 0 0 15px 15px;
+}
+.keysBlack{
+   width: 50px;
+	height: 65%;
+	background-color: #000;
+	display: flex;
+	flex: 0 0 auto;
+	align-items: flex-end;
+	border-radius: 0 0 8px 8px;
+}
+.keyNameW{
+	width: 100%;
+	font-size: 50px;
+	padding: 0 0 10px 0;
+	border-radius: 100%;
+	text-align: center;
+	transition-duration: 1s;
+}
+.keyNameB{
+	width: 100%;
+	font-size: 30px;
+	padding: 0 0 10px 0;
+	text-align: center;
+	border-radius: 100%;
+	color: #FFF;
+	transition-duration: 1s;
+}
+.keyName_active-main{
+	background: red;
+	border-radius: 15px;
+}
+.keyName_active{
+	background: grey;
+	border-radius: 15px;
+}
+
+@media (max-width: 1600px) {
+	main{
+	}
+	.piano{
+		width: 875px;
+		height: 350px;
+	}
+	.piano__interface {
+		height: 122.5px;
+		padding: 10px;
+	}
+	.interface__scales{
+		height: 61px;
+		font-size: 16px;
+	}
+	.scales__label{
+		font-size: 24px;
+	}
+	.piano__body{
+		height: 227.5px;
+		font-size: 24px;
+	}
+	.keysWhite{
+		width: 56px;
+		font-size: 24px;
+	}
+	.keysBlack
+	{
+		width: 35px;
+		font-size: 24px;
+	}
+	.keyNameW{
+		font-size: 28px;
+	}
+	.keyNameB{
+		font-size: 24px;
+	}
+}

@@ -1,3 +1,126 @@
+let notes = ["F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#","E", "F"];//names of Notes
+let majorSequence = [0,2,2,1,2,2,2,1];//vectors of values according to the scale
+let minorSequence = [0,2,1,2,2,1,2,2];
+let dorianSequence = [0,2,1,2,2,2,1,2];
+let phrygianSequence = [0,1,2,2,2,1,2,2];
+let lydianSequence = [0,2,2,2,1,2,2,1];
+let mixolydianSequence = [0,2,2,1,2,2,1,2];
+let locrianSequence = [0,1,2,2,1,2,2,2];
+let scalesNames = ['Major','Minor','Dorian',
+                    'Phrygian','Lydian','Mixolydian','Locrian'];
+
+var activeNote;
+var activeLad;
+
+CreateScales();
+CreateKeys();
+
+function CreateScales()
+{
+	const scalesContainer = document.getElementById('chooseScales');
+	for (let i = 0; i < notes.length - 1; i++) {
+		const scale = document.createElement("div");	
+		scale.className = "radio";
+
+		const input = document.createElement("input");
+		input.type = "radio";
+		input.className = "radio__input";
+		input.name = "scales";
+		let inputId = "radio__" + notes[i];
+		input.id = inputId;
+		input.value = notes[i];
+
+		const label = document.createElement("label");
+		label.className = "radio__label";
+		label.setAttribute('for', inputId);
+		label.textContent = notes[i];
+
+		scale.appendChild(input);
+		scale.appendChild(label);
+		scalesContainer.appendChild(scale);
+	}
+}
+
+function CreateKeys()
+{
+	const keys = notes;
+	keys.push("F#", "G", "G#", "A", "A#", "B", "C");
+	const keysContainer = document.getElementById("pianoKeys");
+	for(let i = 0; i < keys.length; i++)
+	{
+		const key = document.createElement("div");
+		const keyName = document.createElement("div");
+		keyName.id = keys[i];
+		keyName.textContent = keys[i];
+		if(keys[i].includes("#"))
+		{
+			key.className = "keysBlack"
+			keyName.className = "keyNameB"
+		}
+		else
+		{
+			key.className = "keysWhite"
+			keyName.className = "keyNameW";
+		}
+		key.appendChild(keyName);
+		keysContainer.appendChild(key);
+	}
+
+}
+
+// Напиши функцию, которая будет высчитывать ширину белых клавиш и
+// суммируя эти расстояние расставлять черные
+
+
+
+function CalculateNecessaryNotes(){
+	let sequence = [];
+	let necessaryNotes = [];
+	sequence = allSequences[activeLad];
+	
+	let i = 0;
+	let index = Number(activeNote);
+	while(i < 8){
+		 index +=sequence[i];
+		 if(index >= 12)
+			  index -= 12;
+		 console.log(notes[index])
+		 necessaryNotes[i] = notes[index];
+		 i++;
+	}
+	return necessaryNotes;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Объявление переменных
 var keeperMajMin;
 var keeperScale;

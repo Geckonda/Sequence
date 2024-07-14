@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="Scales.css"><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
 	<title>Scales</title>
 </head>
 <body id = "bodys">
@@ -28,93 +28,17 @@
 						</div>
 						<!--Показывает какая гамма выбрана в данный момент.-->
 						<div class="current__scale">
-							<p id="current__scale">
-								<button class="start" id="ST" onclick="start()"></button>
-								<label class="start__label" for ="ST">Choose the scale</label>
-							</p>
+								<div class="start__label">Choose the scale</div>
 						</div>
 					</div>
 					<div id="chooseScales">
-						<div class = "radio">
-							<input class ="radio__input" type="radio" name = "scales" id="radio__A" value="A">
-							<label class="radio__label" for ="radio__A">A ⁣</label>
-						</div>
-						<div class = "radio">
-							<input class ="radio__input" type="radio" name = "scales" id="radio__A#" value="A#">
-							<label class="radio__label" for ="radio__A#">A#</label>
-						</div>
-						<div class = "radio">
-							<input class ="radio__input" type="radio" name = "scales" id="radio__B" value="B">
-							<label class="radio__label" for ="radio__B">B ⁣</label>
-						</div>
-						<div class = "radio">
-							<input class ="radio__input" type="radio" name = "scales" id="radio__C"  value="C">
-							<label class="radio__label" for ="radio__C">C ⁣</label>
-						</div>
-						<div class = "radio">
-							<input class ="radio__input" type="radio" name = "scales" id="radio__C#" value="C#">
-							<label class="radio__label" for ="radio__C#">C#</label>
-						</div>
-						<div class = "radio">
-							<input class ="radio__input" type="radio" name = "scales" id="radio__D" value="D">
-							<label class="radio__label" for ="radio__D">D ⁣</label>
-						</div>
-						<div class = "radio">
-							<input class ="radio__input" type="radio" name = "scales" id="radio__D#" value="D#">
-							<label class="radio__label" for ="radio__D#">D#</label>
-						</div>
-						<div class = "radio">
-							<input class ="radio__input" type="radio" name = "scales" id="radio__E" value="E">
-							<label class="radio__label" for ="radio__E">E ⁣</label>
-						</div>
-						<div class = "radio">
-							<input class ="radio__input" type="radio" name = "scales" id="radio__F" value="F">
-							<label class="radio__label" for ="radio__F">F ⁣</label>
-						</div>
-						<div class = "radio">
-							<input class ="radio__input" type="radio" name = "scales" id="radio__F#" value="F#">
-							<label class="radio__label" for ="radio__F#">F#</label>
-						</div>
-						<div class = "radio">
-							<input class ="radio__input" type="radio" name = "scales" id="radio__G" value="G">
-							<label class="radio__label" for ="radio__G">G ⁣</label>
-						</div>
-						<div class = "radio">
-							<input class ="radio__input" type="radio" name = "scales" id="radio__G#" value="G#">
-							<label class="radio__label" for ="radio__G#">G#</label>
-						</div>
+						<!-- Контейнер для кнопок выбора тональности -->
 					</div>
 				</div>
 				<div id="placeKeys"><!--Блок для блока с клавишами-->
 					<div id="pianoKeys">
-						<div class="keysWhite"><div class="keyNameW" id="E">E</div></div>
-						<div class="keysWhite"><div class="keyNameW" id="F">F</div></div>
-						<div class="keysWhite"><div class="keyNameW" id="G">G</div></div>
-						<div class="keysWhite"><div class="keyNameW" id="A">A</div></div>
-						<div class="keysWhite"><div class="keyNameW" id="B">B</div></div>
-						<div class="keysWhite"><div class="keyNameW" id="C">C</div></div>
-						<div class="keysWhite"><div class="keyNameW" id="D">D</div></div>
-						<div class="keysWhite"><div class="keyNameW" id="E2">E</div></div>
-						<div class="keysWhite"><div class="keyNameW" id="F2">F</div></div>
-						<div class="keysWhite"><div class="keyNameW" id="G2">G</div></div>
-						<div class="keysWhite"><div class="keyNameW" id="A2">A</div></div>
-						<div class="keysWhite"><div class="keyNameW" id="B2">B</div></div>
-						<!--Черные клавиши-->
-							<div id="pianoKeysBlack">
-								<div class="keysBlack"><div id="halfKey"></div></div><!--Не работает-->
-								<div class="keysBlack"><div class="keyNameB"></div></div><!--Не работает-->
-								<div class="keysBlack"><div class="keyNameB" id="F#">F#</div></div>
-								<div class="keysBlack"><div class="keyNameB" id="G#">G#</div></div>
-								<div class="keysBlack"><div class="keyNameB" id="A#">A#</div></div>
-								<div class="keysBlack"><div class="keyNameB"></div></div><!--Не работает-->
-								<div class="keysBlack"><div class="keyNameB" id="C#">C#</div></div>
-								<div class="keysBlack"><div class="keyNameB" id="D#">D#</div></div>
-								<div class="keysBlack"><div class="keyNameB"></div></div><!--Не работает-->
-								<div class="keysBlack"><div class="keyNameB" id="F2#">F#</div></div>
-								<div class="keysBlack"><div class="keyNameB" id="G2#">G#</div></div>
-								<div class="keysBlack"><div class="keyNameB" id="A2#">A#</div></div>
-							</div>
-					</div><!--Блок клавиш-->
+						<!--Блок клавиш-->
+					</div>
 				</div>
 			</div>
 		</div>
