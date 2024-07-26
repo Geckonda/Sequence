@@ -52,7 +52,7 @@ main{
 .interface {
 }
 .interface__scales {
-   width: 80%;
+   width: 95%;
 	height: 100px;
 	display: flex;
 	justify-content: space-between;
@@ -60,7 +60,7 @@ main{
 .scales {
 }
 .scales__container {
-   width: 40%;
+   width: 50%;
 	height: 100%;
 	display: flex;
 	justify-content: space-around;

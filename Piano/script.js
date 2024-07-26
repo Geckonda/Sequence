@@ -16,7 +16,8 @@ var allSequences = [majorSequence,minorSequence,dorianSequence,
 	phrygianSequence,lydianSequence,mixolydianSequence,locrianSequence];
 
 CheckResolution();
-CreateScales();
+CreateScalse();
+CreateNotes();
 CreateKeys();
 PlaceSharpKeys();
 
@@ -28,7 +29,30 @@ function CheckResolution()
 	if(windowHeight > windowWidth)
 		document.querySelector("main").style.transform = "rotate(90deg)"
 }
-function CreateScales()
+function CreateScalse()
+{
+	const scalesContainer = document.querySelector('.scales__container');
+	for (let i = 0; i < scalesNames.length; i++) {
+		const scalesTab = document.createElement("div");
+		scalesTab.classList.add("scales__tab");
+
+		const scalesInput = document.createElement("input");
+		scalesInput.classList.add("scales__input");
+		scalesInput.type = "radio";
+		scalesInput.value = i;
+		scalesInput.id = scalesNames[i] + "Scale";
+
+		const scalesLabel = document.createElement("label");
+		scalesLabel.classList.add("scales__label");
+		scalesLabel.textContent = scalesNames[i].substring(0, 3);
+		scalesLabel.setAttribute('for', scalesInput.id);
+
+		scalesTab.appendChild(scalesInput);
+		scalesTab.appendChild(scalesLabel);
+		scalesContainer.appendChild(scalesTab);
+	}
+}
+function CreateNotes()
 {
 	const scalesContainer = document.getElementById('scale-notes');
 	for (let i = 0; i < notes.length - 1; i++) {
